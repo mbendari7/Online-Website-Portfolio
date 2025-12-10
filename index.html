@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="profile.jpg" type="image/jpeg">
+    <link rel="shortcut icon" href="profile.jpg" type="image/jpeg">
+
+    <meta property="og:title" content="Mahmoud Bendari | Computer Engineering Portfolio">
+    <meta property="og:description"
+        content="Computer Engineering Co-op student specializing in Embedded Systems, Linux, and Hardware Repair.">
+    <meta property="og:image" content="profile.jpg">
+    <meta property="og:type" content="website">
+
+    <title>Mahmoud Bendari | root@portfolio:~</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div id="boot-screen">
+        <div id="boot-text"></div>
+    </div>
+
+    <canvas id="matrix-canvas"></canvas>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">&gt; M.Bendari_</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">./About</a></li>
+                <li><a href="#projects" class="nav-link">./Projects</a></li>
+                <li><a href="#contact" class="nav-link">./Contact</a></li>
+                <li>
+                    <a href="Resume - Mahmoud Bendari.pdf" class="btn-nav" target="_blank">
+                        Resume.pdf <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </li>
+                <li>
+                    <button id="theme-toggle" class="theme-btn">
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero section-border">
+        <div class="container hero-container center-layout">
+
+            <div class="hero-img fade-in-down">
+                <img src="profile.jpg" alt="Mahmoud Bendari">
+            </div>
+
+            <div class="hero-text fade-in-up">
+                <p class="terminal-alert">System Status: ONLINE</p>
+                <h1 class="hacker-text">Mahmoud Bendari</h1>
+
+                <p class="hero-subtitle">
+                    $ I am a <span class="typewriter"
+                        data-text='[ "Computer Engineering Co-op Student.", "Linux Enthusiast.", "Tech Enthusiast." ]'></span>
+                </p>
+
+                <p class="hero-desc">
+                    Computer Engineering Student @ UofGuelph. <br>
+                    <strong>Currently seeking Co-op/Internship opportunities for 2026.</strong><br>
+                    Obsessed with low-level systems, from embedded C to network defense.
+                </p>
+
+                <div class="hero-btns justify-center">
+                    <a href="https://github.com/mbendari7" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-github"></i> git checkout profile
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">sudo contact-me</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section section-border">
+        <div class="container">
+
+            <div class="about-split">
+                <div class="about-text">
+                    <h2 class="section-title hacker-text">root@portfolio:~/about_me</h2>
+                    <div class="terminal-card">
+                        <div class="terminal-header">
+                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                            <span class="terminal-title">bio.txt</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p>
+                                &gt; I'm a Computer Engineering Co-op Student fascinated by secure distributed networks
+                                and low-level hardware.<br><br>
+                                &gt; <strong>Core Interests:</strong> Linux, Network Engineering, Cybersecurity,
+                                Embedded Systems.<br>
+                                &gt; <strong>Current Task:</strong> Learning OOP & Advanced Network Defense.<br>
+                                &gt; <strong>Fun Fact:</strong> Founder of 'Digital Fixers' startup.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-image-slot">
+                    <div class="terminal-card" style="height: 100%; width: 100%; max-width: 400px;">
+                        <div class="terminal-header">
+                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                            <span class="terminal-title">gallery_viewer.exe</span>
+                        </div>
+
+                        <div class="slideshow-container">
+                            <img src="setup.jpg" class="slide" alt="My Setup">
+                            <img src="hardware.png" class="slide" alt="Hardware Repair">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-wrapper" id="skills">
+                <h3 class="section-title hacker-text">root@portfolio:~/tools</h3>
+
+                <div class="skills-grid-3">
+                    <div class="skill-category">
+                        <h4>&gt; ./cybersecurity_tools.sh</h4>
+                        <div class="tags">
+                            <span>Kali Linux</span><span>Metasploit</span><span>Nmap</span>
+                            <span>Wireshark</span><span>Burp Suite</span><span>Aircrack-ng</span>
+                            <span>Hydra</span><span>John the Ripper</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>&gt; ./languages.sh</h4>
+                        <div class="tags">
+                            <span>C</span><span>C++</span><span>Java</span>
+                            <span>Python</span><span>Bash</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h4>&gt; ./hardware.sh</h4>
+                        <div class="tags">
+                            <span>Arduino</span><span>Linux Systems</span><span>PCB Diagnostics</span>
+                            <span>Computer Building</span><span>Hardware Repair</span>
+                        </div>
+                        <div style="margin-top: 10px; font-size: 0.8rem; color: var(--text-secondary);">
+                            <i class="fas fa-microchip"></i> Logic State: <span style="color: var(--accent);">HIGH
+                                (1)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects" class="section section-border">
+        <div class="container">
+            <h2 class="section-title center hacker-text">root@portfolio:~/github_repos</h2>
+            <p class="section-subtitle center">Executing: ls -la ./projects</p>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="card-header">
+                        <i class="fas fa-gamepad card-icon"></i>
+                        <h3>Tic-Tac-Toe.c</h3>
+                    </div>
+                    <p class="project-desc">
+                        <strong>(Advanced C)</strong> Enhanced implementation featuring Dynamic Memory Allocation (DMA),
+                        File I/O for persistent stats, and AI logic.
+                    </p>
+                    <div class="tech-stack"><span>C</span><span>File I/O</span><span>Memory Mgmt</span></div>
+                    <div class="card-links">
+                        <a href="https://github.com/mbendari7/Tic-Tac-Toe-Game" target="_blank" class="link-text">[ View
+                            Source ]</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-header">
+                        <i class="fas fa-wheelchair card-icon"></i>
+                        <h3>Wheelchair_Proto.ino</h3>
+                    </div>
+                    <p class="project-desc">
+                        <strong>(Embedded)</strong> Prototype EV drive train simulation. Uses open-loop control
+                        algorithms to drive high-torque DC motors for calibration tests.
+                    </p>
+                    <div class="tech-stack"><span>Arduino</span><span>C++</span><span>Robotics</span></div>
+                    <div class="card-links">
+                        <a href="https://github.com/mbendari7/Engineering-and-Design-I-Project" target="_blank"
+                            class="link-text">[ View Source ]</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-header">
+                        <i class="fas fa-lock card-icon"></i>
+                        <h3>Key_Safe_Locker.ino</h3>
+                    </div>
+                    <p class="project-desc">
+                        <strong>(Security)</strong> Physical storage circuit requiring password auth to unlock.
+                        Integrates servos and LCDs for a secure user experience.
+                    </p>
+                    <div class="tech-stack"><span>Arduino</span><span>Circuit Design</span><span>Security</span></div>
+                    <div class="card-links">
+                        <a href="https://github.com/mbendari7/Arduino-Key-Safe-Locker" target="_blank"
+                            class="link-text">[ View Source ]</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="section">
+        <div class="container footer-content">
+            <h2 class="hacker-text">root@portfolio:~/contact</h2>
+            <p>Initializing connection...</p>
+            <div class="social-links">
+                <a href="mailto:mbendari25@gmail.com" class="social-btn"><i class="fas fa-envelope"></i> Email</a>
+                <a href="https://www.linkedin.com/in/mbendari" target="_blank" class="social-btn"><i
+                        class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/mbendari7" target="_blank" class="social-btn"><i class="fab fa-github"></i>
+                    GitHub</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mahmoud Bendari. All systems normal.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="cli-terminal" class="cli-window">
+        <div class="cli-header" id="cli-header">
+            <div class="cli-title"><i class="fas fa-terminal"></i> bash -- interactive</div>
+            <div class="cli-controls">
+                <span class="dot yellow" onclick="minimizeCLI()" title="Minimize"></span>
+                <span class="dot red" onclick="closeCLI()" title="Close"></span>
+            </div>
+        </div>
+        <div class="cli-body" id="cli-body">
+            <div class="output-line">Welcome to BendariOS v1.0.</div>
+            <div class="output-line">Type <span class="cmd-highlight">'help'</span> to see available commands.</div>
+            <div class="output-line">Hint: Try <span class="cmd-highlight">'ping'</span>, <span
+                    class="cmd-highlight">'sensors'</span>, or <span class="cmd-highlight">'matrix'</span>.</div>
+            <br>
+            <div class="input-line">
+                <span class="prompt">root@portfolio:~$</span>
+                <input type="text" id="cli-input" autocomplete="off" spellcheck="false">
+            </div>
+        </div>
+    </div>
+
+    <div class="system-bar">
+        <div class="bar-left">
+            <span class="status-item"><i class="fas fa-user-astronaut"></i> USER: ROOT</span>
+            <span class="status-item"><i class="fas fa-network-wired"></i> IP: 127.0.0.1</span>
+            <span class="status-item" id="vim-mode" style="display:none; color: var(--accent);"><i
+                    class="fas fa-keyboard"></i> -- VIM MODE --</span>
+        </div>
+        <div class="bar-right">
+            <span class="status-item clickable" onclick="toggleCLI()"><i class="fas fa-terminal"></i> TERMINAL</span>
+            <span class="status-item"><i class="fas fa-map-marker-alt"></i> GUELPH, ON</span>
+            <span class="status-item" id="clock">00:00:00</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

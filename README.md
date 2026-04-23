@@ -2,51 +2,30 @@
 
 ![Portfolio Preview](setup.jpg)
 
-> A highly interactive, terminal-themed online portfolio built with **HTML5, CSS3, and Vanilla JavaScript**. Designed to showcase my skills in **Linux, Embedded Systems, and Low-Level Engineering** to potential employers.
+> A highly interactive, *Cyberpunk: Edgerunners*-inspired online portfolio built entirely with **HTML5, CSS3, and Vanilla JavaScript**. Designed to showcase my skills in **Computer Engineering, Embedded Systems, and Low-Level Development** to potential employers.
 
-🔗 **Live Portfolio:** [https://mahmoudbendari.com/) *(Hosted on IONOS)*
+🔗 **Live Portfolio:** [https://mahmoudbendari.com/](https://mahmoudbendari.com/) *(Hosted on IONOS)*
 
 ---
 
 ## 🚀 Purpose & Theme
 
-This project serves as my professional digital resume and engineering portfolio. The design mimics a live Linux desktop environment to reflect my technical focus. It moves beyond a static webpage by incorporating interactive system behaviors that engineering leads and technical recruiters will recognize.
+This project serves as my professional digital resume and engineering portfolio. The core design philosophy transitions away from traditional minimalistic web design, opting instead for a dynamic, sci-fi "Night City" database. 
 
 **Core Design Philosophy:**
-* **Terminal-First:** A fully functional CLI is the primary navigation tool for power users.
-* **System Realism:** Features like boot sequences, memory dumps, and sensor readings simulate a real operating system.
-* **Hardware Focus:** The visual aesthetic (PCB background, dark mode) aligns with my work in embedded systems and computer engineering.
+* **Immersive Interface:** Utilizes complex CSS glassmorphism, aggressive angular clip-paths, and custom cyber-reticle cursors.
+* **System Realism:** Structured like a high-end character database, placing operational metrics, hardware specifications, and core engineering competencies front and center in a dedicated system readout sidebar.
+* **Hardware Focus:** The visual aesthetic aligns with my passion for custom PC architecture, system stability, and embedded systems.
 
 ---
 
-## ⚡ Features & Engineering "Easter Eggs"
+## ⚡ Interactive Engineering Features
 
-### 🖥️ Interactive CLI Terminal
-A draggable, fully functional terminal window allows users to navigate the site using commands.
-* **Try typing:** `help`, `about`, `skills`, `contact`, or `clear`.
-* **Hardware Simulation:**
-    * `sensors`: Displays simulated real-time hardware stats (Voltage rails, CPU temp, Fan speed).
-    * `hexdump`: Simulates a raw memory dump of the current page process.
-    * `ping`: Simulates a network connectivity test to Google DNS.
-    * `man resume`: Opens the PDF resume in a new tab (Manual page style).
-* **Tab Autocomplete:** Supports `[TAB]` key to autocomplete commands.
-* **Command History:** Use `[UP]` and `[DOWN]` arrows to cycle through previous commands.
+The portfolio integrates several advanced frontend engineering features to simulate a live, highly responsive operating system:
 
-### ⌨️ Vim Navigation Support
-For power users who prefer keyboard-only navigation:
-* Press **`j`** to scroll down.
-* Press **`k`** to scroll up.
-* *Includes a visual indicator in the system bar when Vim mode is active.*
-
-### 🟢 Matrix Background Addition
-* **Command:** Type `matrix` in the terminal to toggle a full-screen, rain-code animation using the HTML5 Canvas API.
-
-### 🔧 Visual System Design
-* **PCB/Breadboard Theme:** The background features a dot-grid pattern mimicking an engineering prototyping board.
-* **System Polybar:** A fixed bottom status bar displaying:
-    * **Real-time Clock**
-    * **Live IP Address Detection** (Fetches visitor's public IP via API)
-    * **CPU Usage Simulation**
+* **Neural Link Boot Screen:** An interactive initialization gate that bypasses modern browser autoplay restrictions to sync the visual experience with a live ambient audio stream.
+* **Cryptographic Decryption:** Navigation is driven by a custom tabbed interface, where switching data panels triggers a text-scrambling algorithm to simulate real-time data decryption.
+* **Mechanical Audio Engine:** Features an independent audio engine built on the Web Audio API, synthesizing precise, low-latency oscillator waveforms to provide tactile auditory feedback for every user interaction.
 
 ---
 
@@ -55,15 +34,15 @@ For power users who prefer keyboard-only navigation:
 This portfolio is hosted professionally using **IONOS** to ensure a dedicated, branded online presence.
 
 * **Domain:** Custom domain configured via **IONOS DNS** settings.
-* **Hosting:** Static file hosting on IONOS web servers (Apache/Nginx).
-* **Deployment Workflow:** Files (`index.html`, `style.css`, `script.js`) are uploaded directly to the web space via SFTP for production.
+* **Hosting:** Static file hosting on IONOS web servers.
+* **Deployment Workflow:** Files (`index.html`, `style.css`, `script.js`) are uploaded directly to the web space via SFTP for production, ensuring lightweight, frictionless, and rapid updates.
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Frontend:** HTML5, CSS3 (Custom Variables, Flexbox/Grid), JavaScript (ES6+).
-* **Assets:** FontAwesome (Icons), Google Fonts (Consolas/Monospace).
+* **Frontend:** HTML5, CSS3 (Custom Variables, Flexbox/Grid, Glassmorphism, Keyframe Animations), Vanilla JavaScript (ES6+, Web Audio API).
+* **Typography & Icons:** FontAwesome, Google Fonts (Chakra Petch, Rajdhani, Share Tech Mono).
 * **Infrastructure:** IONOS Web Hosting.
 
 ---
@@ -72,10 +51,10 @@ This portfolio is hosted professionally using **IONOS** to ensure a dedicated, b
 
 ```bash
 .
-├── index.html       # Main DOM structure & Boot Screen logic
-├── style.css        # PCB Theme, Terminal styling, & Animations
-├── script.js        # CLI Logic, Vim bindings, Matrix Canvas, & IP Fetch
-├── profile.jpg      # Profile & Favicon asset
-├── setup.jpg        # Workspace photography
-├── hardware.png     # Hardware/Soldering photography
-└── Resume.pdf       # Professional CV
+├── index.html       # Main DOM structure, UI layout, & Audio mounting
+├── style.css        # Edgerunners theme, UI styling, Clip-paths, & Animations
+├── script.js        # Tab Logic, Web Audio API, Text Scramble, & Boot Sequence
+├── profile.jpg      # Profile photography & Favicon asset
+├── setup.jpg        # Hardware rig workspace photography
+├── Hardware.jpg     # Hardware diagnostic/soldering photography
+└── Mahmoud Bendari - Resume.pdf  # Professional CV

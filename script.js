@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         if (bgAudio) {
-            bgAudio.volume = 0.12; // Quieter ambient background audio
+            // Extremely faint volume (2%)
+            bgAudio.volume = 0.02; 
             bgAudio.play().catch(e => console.log("Audio play prevented by browser:", e));
         }
 
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (audioToggle && bgAudio) {
         audioToggle.addEventListener('click', (e) => {
             if (bgAudio.paused) {
-                bgAudio.volume = 0.12;
+                bgAudio.volume = 0.02;
                 bgAudio.play();
                 audioToggle.innerHTML = '<i class="fas fa-volume-up"></i> AUDIO_SYNC';
             } else {

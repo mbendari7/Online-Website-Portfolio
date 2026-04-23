@@ -30,15 +30,16 @@ body {
     align-items: center;
 }
 
-/* PANNING EDGERUNNER BACKDROP - BRIGHTER & MORE VISIBLE */
+/* LIVE PANNING BACKDROP - Fixed with a live URL and increased brightness */
 .edgerunner-backdrop {
     position: fixed;
     top: -10%; left: -10%;
     width: 120vw; height: 120vh;
-    background-image: url('https://images.unsplash.com/photo-1601042879364-f3947d3f9c16?q=80&w=2000&auto=format&fit=crop');
+    background-image: url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=2000&auto=format&fit=crop'); 
     background-size: cover;
     background-position: center;
-    filter: brightness(0.55) contrast(1.1) sepia(0.2) hue-rotate(320deg);
+    /* Brightness increased so it's clearly visible behind the UI */
+    filter: brightness(0.45) contrast(1.2) sepia(0.2) hue-rotate(310deg);
     z-index: -2;
     animation: panBackground 60s ease-in-out infinite alternate;
 }
@@ -48,7 +49,6 @@ body {
     100% { transform: scale(1.1) translate(-2%, 2%); }
 }
 
-/* REDUCED CRT OPACITY FOR VISIBILITY */
 .crt-overlay {
     position: fixed;
     top: 0; left: 0; width: 100vw; height: 100vh;
@@ -64,7 +64,6 @@ body {
     z-index: 9997; pointer-events: none;
 }
 
-/* NEURAL LINK UNLOCK SCREEN */
 #system-unlock-screen {
     position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
     background: rgba(8, 8, 8, 0.95); z-index: 10000;
@@ -88,9 +87,10 @@ body {
     font-family: var(--font-cyber); font-size: 4.5rem;
     color: var(--edge-magenta); font-weight: 700;
     margin-bottom: 10px; text-shadow: 4px 4px 0px rgba(252, 238, 10, 0.5);
+    text-align: center;
 }
 
-.warning-text { color: var(--edge-yellow); font-size: 1.2rem; letter-spacing: 3px; font-weight: bold; }
+.warning-text { color: var(--edge-yellow); font-size: 1.2rem; letter-spacing: 3px; font-weight: bold; text-align: center;}
 
 .cyber-btn-large {
     background: rgba(252, 238, 10, 0.1); border: 2px solid var(--edge-yellow);
@@ -104,11 +104,11 @@ body {
     background: var(--edge-yellow); color: #000; box-shadow: 0 0 30px rgba(252, 238, 10, 0.4);
 }
 
-/* MAIN UI CONTAINER - GLASSMORPHISM BLUR */
+/* MAIN UI CONTAINER - Slightly more transparent to show the background */
 .cyber-ui-container {
     width: 100%; max-width: 1550px; height: 90vh; min-height: 800px;
-    background: rgba(8, 8, 10, 0.75); border: 2px solid var(--edge-yellow);
-    backdrop-filter: blur(8px);
+    background: rgba(8, 8, 10, 0.65); border: 2px solid var(--edge-yellow);
+    backdrop-filter: blur(6px);
     display: flex; flex-direction: column; position: relative;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9), inset 0 0 30px rgba(252, 238, 10, 0.1);
     z-index: 10;
@@ -124,7 +124,7 @@ body {
 .edge-cyan-text { color: var(--edge-cyan); font-weight: bold; }
 
 .db-title { font-family: var(--font-cyber); font-size: 2.5rem; font-weight: 700; letter-spacing: 2px; margin-right: 15px; }
-.db-path { font-family: var(--font-head); color: #aaa; font-size: 1.2rem; }
+.db-path { font-family: var(--font-head); color: #aaa; font-size: 1.2rem; display: inline-block; }
 
 .audio-btn {
     background: transparent; border: 1px solid var(--edge-cyan); color: var(--edge-cyan);
@@ -135,7 +135,6 @@ body {
 
 .ui-main { display: flex; flex-grow: 1; overflow: hidden; }
 
-/* SIDEBAR */
 .character-sidebar {
     width: 400px; flex-shrink: 0; border-right: 1px solid rgba(252, 238, 10, 0.3);
     padding: 35px; background: rgba(0, 0, 0, 0.4); display: flex; flex-direction: column; overflow-y: auto;
@@ -162,7 +161,6 @@ body {
 
 .highlight-yellow { color: var(--edge-yellow) !important; text-shadow: 0 0 5px rgba(252, 238, 10, 0.5); }
 
-/* MAIN TABS */
 .tab-interface { flex-grow: 1; display: flex; flex-direction: column; padding: 40px 50px; overflow: hidden; }
 
 .tab-nav { display: flex; gap: 15px; border-bottom: 2px solid rgba(252, 238, 10, 0.3); margin-bottom: 35px; }
@@ -230,3 +228,33 @@ body {
     margin-right: 20px;
 }
 .key-hint { background: var(--edge-magenta); color: #fff; padding: 2px 8px; margin-right: 5px; }
+
+/* ========================================= */
+/* MOBILE RESPONSIVENESS                     */
+/* ========================================= */
+@media (max-width: 1024px) {
+    .ui-main { flex-direction: column; overflow-y: auto; }
+    .character-sidebar { width: 100%; border-right: none; border-bottom: 2px solid var(--edge-yellow); overflow-y: visible; padding: 20px; }
+    .tab-interface { overflow-y: visible; padding: 20px; }
+    .tab-content-container { overflow-y: visible; padding-right: 0; }
+    .cyber-ui-container { height: auto; max-height: 95vh; }
+}
+
+@media (max-width: 768px) {
+    body { padding: 10px; }
+    .ui-header { flex-direction: column; height: auto; padding: 15px; gap: 15px; text-align: center; }
+    .db-path { display: none; }
+    .glitch-text { font-size: 2.8rem; }
+    .cyber-btn-large { font-size: 1.2rem; padding: 12px 20px; }
+    .character-name { font-size: 2.2rem; }
+    .tab-nav { flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .tab-btn { font-size: 1.2rem; padding: 10px 15px; flex-grow: 1; text-align: center; }
+    .pane-title { font-size: 2.2rem; }
+    .content-block p { font-size: 1.05rem; }
+    .project-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .project-header h3 { font-size: 1.4rem; }
+    .comms-grid { grid-template-columns: 1fr; }
+    .comm-btn { font-size: 1.2rem; padding: 15px; }
+    .ui-footer { flex-direction: column; justify-content: center; height: auto; padding: 15px; gap: 10px; text-align: center; }
+    .hazard-stripe { width: 100%; height: 5px; margin: 0; }
+}

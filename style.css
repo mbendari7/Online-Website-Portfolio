@@ -30,7 +30,6 @@ body {
     align-items: center;
 }
 
-/* LIVE PANNING BACKDROP - Fixed with a live URL and increased brightness */
 .edgerunner-backdrop {
     position: fixed;
     top: -10%; left: -10%;
@@ -38,7 +37,6 @@ body {
     background-image: url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=2000&auto=format&fit=crop'); 
     background-size: cover;
     background-position: center;
-    /* Brightness increased so it's clearly visible behind the UI */
     filter: brightness(0.45) contrast(1.2) sepia(0.2) hue-rotate(310deg);
     z-index: -2;
     animation: panBackground 60s ease-in-out infinite alternate;
@@ -104,7 +102,6 @@ body {
     background: var(--edge-yellow); color: #000; box-shadow: 0 0 30px rgba(252, 238, 10, 0.4);
 }
 
-/* MAIN UI CONTAINER - Slightly more transparent to show the background */
 .cyber-ui-container {
     width: 100%; max-width: 1550px; height: 90vh; min-height: 800px;
     background: rgba(8, 8, 10, 0.65); border: 2px solid var(--edge-yellow);
@@ -230,31 +227,92 @@ body {
 .key-hint { background: var(--edge-magenta); color: #fff; padding: 2px 8px; margin-right: 5px; }
 
 /* ========================================= */
-/* MOBILE RESPONSIVENESS                     */
+/* MOBILE RESPONSIVENESS (Refined)           */
 /* ========================================= */
 @media (max-width: 1024px) {
-    .ui-main { flex-direction: column; overflow-y: auto; }
-    .character-sidebar { width: 100%; border-right: none; border-bottom: 2px solid var(--edge-yellow); overflow-y: visible; padding: 20px; }
-    .tab-interface { overflow-y: visible; padding: 20px; }
-    .tab-content-container { overflow-y: visible; padding-right: 0; }
-    .cyber-ui-container { height: auto; max-height: 95vh; }
+    body { padding: 10px; align-items: flex-start; }
+    .ui-main { flex-direction: column; overflow: visible; }
+    
+    .character-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid var(--edge-yellow);
+        overflow: visible;
+        padding: 20px;
+        flex-shrink: 0;
+    }
+
+    .tab-interface {
+        overflow: visible;
+        padding: 20px;
+        flex-shrink: 0;
+    }
+
+    .tab-content-container {
+        overflow: visible;
+        padding-right: 0;
+    }
+
+    .cyber-ui-container {
+        height: auto;
+        max-height: none;
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 768px) {
-    body { padding: 10px; }
-    .ui-header { flex-direction: column; height: auto; padding: 15px; gap: 15px; text-align: center; }
+    .ui-header {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 15px;
+        text-align: center;
+    }
+
     .db-path { display: none; }
     .glitch-text { font-size: 2.8rem; }
     .cyber-btn-large { font-size: 1.2rem; padding: 12px 20px; }
     .character-name { font-size: 2.2rem; }
-    .tab-nav { flex-wrap: wrap; justify-content: center; gap: 10px; }
-    .tab-btn { font-size: 1.2rem; padding: 10px 15px; flex-grow: 1; text-align: center; }
-    .pane-title { font-size: 2.2rem; }
-    .content-block p { font-size: 1.05rem; }
-    .project-header { flex-direction: column; align-items: flex-start; gap: 10px; }
-    .project-header h3 { font-size: 1.4rem; }
-    .comms-grid { grid-template-columns: 1fr; }
-    .comm-btn { font-size: 1.2rem; padding: 15px; }
-    .ui-footer { flex-direction: column; justify-content: center; height: auto; padding: 15px; gap: 10px; text-align: center; }
+
+    .tab-nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2x2 grid + 1 full row for the last tab */
+        gap: 8px;
+        border-bottom: none;
+        margin-bottom: 20px;
+    }
+
+    .tab-btn {
+        font-size: 1rem;
+        padding: 10px 5px;
+        text-align: center;
+        clip-path: none; /* Simplify for mobile visibility */
+        border: 1px solid rgba(252, 238, 10, 0.3);
+    }
+    
+    .tab-btn:last-child {
+        grid-column: span 2; /* Comms takes full width on its row */
+    }
+
+    .pane-title { font-size: 2rem; margin-bottom: 15px; }
+    .content-block p { font-size: 1rem; line-height: 1.6; }
+
+    .project-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .project-header h3 { font-size: 1.3rem; }
+    .project-details { font-size: 1rem; }
+
+    .comms-grid { grid-template-columns: 1fr; gap: 15px; }
+    .comm-btn { font-size: 1.1rem; padding: 15px; }
+
+    .ui-footer {
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        padding: 15px;
+        gap: 10px;
+        text-align: center;
+        position: static; /* Let it flow with scroll */
+    }
+
     .hazard-stripe { width: 100%; height: 5px; margin: 0; }
 }
